@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Referencia a tu archivo de estilos -->
+</head>
+<body>
+    <!-- Puedes incluir aquí el menú de navegación, o lo que necesites -->
+    <header>
+        <div class="logo">
+            <a href="#">Ignacio</a>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" onclick="seleccionar()">INICIO</a></li>
+                <li><a href="graficos.html" onclick="seleccionar()">GRAFICOS</a></li>
+                <!-- Otros enlaces según sea necesario -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Gráficos</h1>
+            <!-- Aquí puedes insertar tus gráficos de Looker Studio, por ejemplo -->
+            <iframe 
+                src="https://lookerstudio.google.com/embed/reporting/tu_id_del_reporte" 
+                width="100%" 
+                height="600" 
+                style="border:none;">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ignacio - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
 
