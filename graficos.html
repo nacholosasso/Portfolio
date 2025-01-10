@@ -6,39 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="estilo.css"> <!-- Referencia a tu archivo de estilos -->
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- Puedes incluir aquí el menú de navegación, o lo que necesites -->
-    <header>
-        <div class="logo">
-            <a href="#">Ignacio</a>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Ignacio</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="graficos.html" onclick="seleccionar()">GRAFICOS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION GRAFICOS -->
+    <section id="graficos" class="graficos">
+        <div class="contenido-seccion">
+            <h2>Gráficos</h2>
+            <!-- Aquí puedes colocar tus gráficos, uno debajo del otro -->
+            <!-- Ejemplo con iframe de Looker Studio -->
+            <iframe src="https://lookerstudio.google.com/embed/reporting/81be4ad5-5058-4eac-9caa-1467fb2e25f9/page/pAFXD" frameborder="0" style="border:0" width="100%" height="600" style="border:none;"></iframe>
+            <iframe src="https://lookerstudio.google.com/embed/reporting/dd5a3f37-b8d9-4c92-bff3-960c0b49e73a/page/wlAXD" frameborder="0" style="border:0" width="100%" height="600" style="border:none;"></iframe>
         </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html" onclick="seleccionar()">INICIO</a></li>
-                <li><a href="graficos.html" onclick="seleccionar()">GRAFICOS</a></li>
-                <!-- Otros enlaces según sea necesario -->
-            </ul>
-        </nav>
-    </header>
+    </section>
 
-    <main>
-        <section>
-            <h1>Gráficos</h1>
-            <!-- Aquí puedes insertar tus gráficos de Looker Studio, por ejemplo -->
-            <iframe 
-                src="https://lookerstudio.google.com/embed/reporting/81be4ad5-5058-4eac-9caa-1467fb2e25f9/page/pAFXD" frameborder="0" style="border:0" 
-                width="100%" 
-                height="600" 
-                style="border:none;">
-            </iframe>
-        </section>
-    </main>
-
+    <!-- footer -->
     <footer>
-        <p>© Ignacio - Todos los derechos reservados</p>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/ignacio-lo-sasso/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nacholosasso/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
