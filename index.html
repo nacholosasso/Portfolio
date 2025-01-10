@@ -340,44 +340,65 @@ Me gusta ampliar mis conocimientos constantemente en las nuevas herramientas tec
     </section>
 
     <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <div class="fila">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
-                <!-- Mapa -->
-                <div class="col">
-                    <img src="img/ubicacion.png" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                Av. Congreso 4029, CABA - Coghlan
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                Llamame: 11-3766-4729
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                Email: nacholosasso@hotmail.com
-                            </li>
-                        </ul>
-                    </div>
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <div class="fila">
+            <!-- Formulario -->
+            <div class="col">
+                <input type="text" id="nombre" placeholder="Tú Nombre">
+                <input type="text" id="telefono" placeholder="Número telefónico">
+                <input type="text" id="correo" placeholder="Dirección de correo">
+                <input type="text" id="tema" placeholder="Tema">
+                <textarea id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <button onclick="enviarMensaje()">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                    <span class="overlay"></span>
+                </button>
+            </div>
+            <!-- Mapa -->
+            <div class="col">
+                <img src="img/ubicacion.png" alt="">
+                <div class="info">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Av. Congreso 4029, CABA - Coghlan
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            Llamame: 11-3766-4729
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            Email: nacholosasso@hotmail.com
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<script>
+function enviarMensaje() {
+    // Captura los valores de los campos del formulario
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const correo = document.getElementById("correo").value;
+    const tema = document.getElementById("tema").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    // Crea el contenido del correo
+    const mailtoLink = `mailto:nacholosasso@hotmail.com?subject=${encodeURIComponent(tema)}&body=${encodeURIComponent(
+        `Nombre: ${nombre}\nTeléfono: ${telefono}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`
+    )}`;
+
+    // Abre el cliente de correo predeterminado con los datos
+    window.location.href = mailtoLink;
+}
+</script>
+
     </section>
 
     <!-- footer -->
