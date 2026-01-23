@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio</title>
+    <title>Portfolio - Ignacio Lo Sasso</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- HEADER MENU -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
@@ -21,9 +20,9 @@
                     <li><a href="#sobremi" onclick="seleccionar()">ABOUT ME</a></li>
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">RESUME</a></li>
-                    <li><a href="graficos.html" onclick="seleccionar()">GRAPHICS</a></li>
+                    <li><a href="graficos.html" onclick="seleccionar()">CHARTS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
-                    <li><a href="index.html" onclick="seleccionar()">ESPAÑOL</a></li>
+                    <li><a href="index.html" onclick="seleccionar()">SPANISH</a></li>
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -32,14 +31,13 @@
         </header>
     </div>
 
-    <!-- HOME SECTION -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/foto_perfil.jpg" alt="">
+                <img src="img/foto_perfil.jpg" alt="Ignacio Lo Sasso">
             </div>
             <h1>IGNACIO LO SASSO</h1>
-            <h2>CPA UBA T447 F200 - Management Control</h2>
+            <h2>Management Control - Budgeting</h2>
             <div class="redes">
                 <a href="https://www.linkedin.com/in/ignacio-lo-sasso/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/nacholosasso/"><i class="fa-brands fa-instagram"></i></a>
@@ -48,298 +46,167 @@
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
             <h2>About Me</h2>
-            <p><span>Hello, I'm Ignacio Lo Sasso.</span> I'm a Certified Public Accountant from UBA, graduated in December 2022. Throughout my career, I have focused on various areas that have allowed me to gain a global vision of processes and acquire valuable skills to optimize operations. My interest in technology and automation has led me to develop data skills and the use of technological tools that improve information efficiency and accuracy. I enjoy constantly expanding my knowledge in new technological tools.</p>
+            <p><span>Hello, I'm Ignacio Lo Sasso, a Public Accountant (UBA).</span> Throughout my career, I have developed expertise in various areas, allowing me to fully understand business management cycles and gain a global vision of internal processes. This journey has strengthened my technical knowledge and analytical capacity. Currently, I am in charge of the budgeting process, coordinating and aligning projections across different organizational areas. Furthermore, I possess strong command of Excel and analysis tools such as Power Query, DAX, and Power BI, enabling me to generate automated reports and optimize information management. I am keen on continuing to learn and applying technological solutions.</p>
 
             <div class="fila">
-                <!-- Personal Information -->
                 <div class="col">
                     <h3>Personal Information</h3>
                     <ul>
-                        <li>
-                            <strong>Birth Date</strong>
-                            07-17-1997
-                        </li>
-                        <li>
-                            <strong>Phone</strong>
-                            11-3766-4729
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            nacholosasso@hotmail.com
-                        </li>
-                        <li>
-                            <strong>Address</strong>
-                            Av. Congreso 4029, CABA Coghlan
-                        </li>
-                        <li>
-                            <strong>Position</strong>
-                            Full-time Employee
-                        </li>
+                        <li><strong>Birthdate</strong> 07-17-1997</li>
+                        <li><strong>Phone</strong> +54 11-3766-4729</li>
+                        <li><strong>Email</strong> nacholosasso@hotmail.com</li>
+                        <li><strong>Address</strong> Av. Congreso 4029, CABA Coghlan</li>
+                        <li><strong>Status</strong> Employed</li>
                     </ul>
                 </div>
 
                 <div class="col">
                     <h3>Interests</h3>
                     <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span>GAMING</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-headphones"></i>
-                            <span>MUSIC</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-plane"></i>
-                            <span>TRAVEL</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-futbol"></i>
-                            <span>SOCCER</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-film"></i>
-                            <span>CINEMA</span>
-                        </div>
+                        <div class="interes"><i class="fa-solid fa-gamepad"></i><span>GAMING</span></div>
+                        <div class="interes"><i class="fa-solid fa-headphones"></i><span>MUSIC</span></div>
+                        <div class="interes"><i class="fa-solid fa-plane"></i><span>TRAVEL</span></div>
+                        <div class="interes"><i class="fa-solid fa-futbol"></i><span>SOCCER</span></div>
+                        <div class="interes"><i class="fa-solid fa-film"></i><span>CINEMA</span></div>
                     </div>
                 </div>
             </div>
-            <section>
-                <div>
-                    <a href="CV_Ignacio_Lo_Sasso_English.pdf" download="CV_Ignacio_Lo_Sasso_English.pdf" class="download-button">
-                        Download CV <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
-            </section>
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-            <style>
-                .download-button {
-                    display: inline-block;
-                    padding: 10px 20px;
-                    color: white;
-                    background-color: #007bff;
-                    text-decoration: none;
-                    font-size: 18px;
-                    border-radius: 5px;
-                    transition: background-color 0.3s ease, transform 0.2s ease;
-                    text-align: center;
-                    font-weight: bold;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                }
-
-                .download-button i {
-                    margin-left: 8px;
-                }
-
-                .download-button:hover {
-                    background-color: #0056b3;
-                    transform: scale(1.05);
-                }
-
-                .download-button:active {
-                    background-color: #003f7f;
-                    transform: scale(1);
-                }
-            </style>
-
-            <!-- SKILLS SECTION -->
-            <section class="skills" id="skills">
-                <div class="contenido-seccion">
-                    <h2>Skills</h2>
-                    <div class="fila">
-                        <!-- Technical Skills -->
-                        <div class="col">
-                            <h3>Technical</h3>
-                            <ul class="skill-list">
-                                <li>
-                                    <i class="fas fa-database"></i>
-                                    SQL - Intermediate
-                                </li>
-                                <li>
-                                    <i class="fas fa-cogs"></i>
-                                    RPA (Power Automate- UIPATH) - Advanced
-                                </li>
-                                <li>
-                                    <i class="fas fa-file-excel"></i>
-                                    Excel - Advanced
-                                </li>
-                                <li>
-                                    <i class="fas fa-filter"></i>
-                                    Power Query - Advanced
-                                </li>
-                                <li>
-                                    <i class="fab fa-python"></i>
-                                    Python - Intermediate
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Professional Skills -->
-                        <div class="col">
-                            <h3>Professional</h3>
-                            <ul class="skill-list">
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    Teamwork
-                                </li>
-                                <li>
-                                    <i class="fas fa-comments"></i>
-                                    Communication
-                                </li>
-                                <li>
-                                    <i class="fas fa-sync-alt"></i>
-                                    Adaptability
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                    Dedication
-                                </li>
-                                <li>
-                                    <i class="fas fa-user-check"></i>
-                                    Autonomy
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- RESUME SECTION -->
-            <section id="curriculum" class="curriculum">
-                <div class="contenido-seccion">
-                    <h2>Resume</h2>
-                    <div class="fila">
-                        <!-- Left Column - Education -->
-                        <div class="col izquierda">
-                            <h3>Education</h3>
-                            <div class="item izq">
-                                <h4>Economic Sciences</h4>
-                                <span class="casa">University of Buenos Aires - FCE</span>
-                                <span class="fecha">2016 - 2022</span>
-                                <div class="conectori">
-                                    <div class="circuloi"></div>
-                                </div>
-                            </div>
-                            <div class="item izq">
-                                <h4>High School Diploma in Business</h4>
-                                <span class="casa">Instituto Nuestra Sra. del Carmen</span>
-                                <span class="fecha">2010 - 2015</span>
-                                <p></p>
-                                <div class="conectori">
-                                    <div class="circuloi"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Right Column - Experience -->
-                        <div class="col derecha">
-                            <h3>Work Experience</h3>
-                            <div class="item der">
-                                <h4>Management Control</h4>
-                                <span class="casa">Professional Council of Economic Sciences CABA</span>
-                                <span class="fecha">2022 - Present</span>
-                                <p>Designed and executed SQL queries to extract and analyze large volumes of data from multiple databases, ensuring integrity and accuracy in reports. Implemented interactive Power BI dashboards to visualize key metrics, improving real-time decision-making. Automated repetitive processes using Power Automate, reducing operational times.</p>
-                                <div class="conectord">
-                                    <div class="circulod"></div>
-                                </div>
-                            </div>
-                            <div class="item der">
-                                <h4>Accounting and Tax Analyst</h4>
-                                <span class="casa">Professional Council of Economic Sciences CABA</span>
-                                <span class="fecha">2020 - 2022</span>
-                                <p>Performed accounting and tax tasks including: - Tax returns (Sicore, VAT, Income Tax, SIJP) - Balance Sheet and Income Statement Accounts - Payment Processing - Current Account Reconciliation - Bank Reconciliations - Corporate Card Reconciliation</p>
-                                <div class="conectord">
-                                    <div class="circulod"></div>
-                                </div>
-                            </div>
-                            <div class="item der">
-                                <h4>Accounts Payable</h4>
-                                <span class="casa">Professional Council of Economic Sciences CABA</span>
-                                <span class="fecha">2018 - 2020</span>
-                                <p>Responsible for processing all organization invoices using SAP, PO controls, cost center and internal order allocations, supplier registration, and general purchasing processes.</p>
-                                <div class="conectord">
-                                    <div class="circulod"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <button onclick="location.href='graficos.html'">Graphics</button>
-
-            <!-- CONTACT SECTION -->
-            <section id="contacto" class="contacto">
-                <div class="contenido-seccion">
-                    <h2>CONTACT</h2>
-                    <div class="fila">
-                        <!-- Form -->
-                        <div class="col">
-                            <input type="text" id="nombre" placeholder="Your Name">
-                            <input type="text" id="telefono" placeholder="Phone Number">
-                            <input type="text" id="correo" placeholder="Email Address">
-                            <input type="text" id="tema" placeholder="Subject">
-                            <textarea id="mensaje" cols="30" rows="10" placeholder="Message"></textarea>
-                            <button onclick="enviarMensaje()">
-                                Send Message <i class="fa-solid fa-paper-plane"></i>
-                                <span class="overlay"></span>
-                            </button>
-                        </div>
-                        <!-- Map -->
-                        <div class="col">
-                            <img src="img/ubicacion.png" alt="">
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        Av. Congreso 4029, CABA - Coghlan
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-mobile-screen"></i>
-                                        Call me: 11-3766-4729
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-envelope"></i>
-                                        Email: nacholosasso@hotmail.com
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <script>
-                function enviarMensaje() {
-                    const nombre = document.getElementById("nombre").value;
-                    const telefono = document.getElementById("telefono").value;
-                    const correo = document.getElementById("correo").value;
-                    const tema = document.getElementById("tema").value;
-                    const mensaje = document.getElementById("mensaje").value;
-
-                    const mailtoLink = `mailto:nacholosasso@hotmail.com?subject=${encodeURIComponent(tema)}&body=${encodeURIComponent(
-                        `Name: ${nombre}\nPhone: ${telefono}\nEmail: ${correo}\n\nMessage:\n${mensaje}`
-                    )}`;
-
-                    window.location.href = mailtoLink;
-                }
-            </script>
-
-            <!-- footer -->
-            <footer>
-                <a href="#inicio" class="arriba">
-                    <i class="fa-solid fa-angles-up"></i>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="CV_Ignacio_Lo_Sasso_EN.pdf" download class="download-button">
+                    Download CV <i class="fa-solid fa-download"></i>
                 </a>
-                <div class="redes">
-                    <a href="https://www.linkedin.com/in/ignacio-lo-sasso/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/nacholosasso/"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </footer>
+            </div>
+        </div>
+    </section>
 
-            <script src="script.js"></script>
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <div class="col">
+                    <h3>Technical</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-file-excel"></i> Excel - Advanced</li>
+                        <li><i class="fas fa-filter"></i> Power Query - Advanced</li>
+                        <li><i class="fas fa-chart-line"></i> Power BI - Advanced</li>
+                        <li><i class="fas fa-database"></i> SQL - Intermediate</li>
+                        <li><i class="fas fa-cogs"></i> RPA (Power Automate - UiPath) - Advanced</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Professional</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-users"></i> Teamwork</li>
+                        <li><i class="fas fa-comments"></i> Communication</li>
+                        <li><i class="fas fa-sync-alt"></i> Adaptability</li>
+                        <li><i class="fas fa-heart"></i> Dedication</li>
+                        <li><i class="fas fa-user-check"></i> Autonomy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Resume</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Education</h3>
+                    <div class="item izq">
+                        <h4>Economic Sciences (Public Accountant)</h4>
+                        <span class="casa">University of Buenos Aires (FCE - UBA)</span>
+                        <span class="fecha">2016 - 2022</span>
+                        <div class="conectori"><div class="circuloi"></div></div>
+                    </div>
+                    <div class="item izq">
+                        <h4>High School Diploma in Business & Accounting</h4>
+                        <span class="casa">Instituto Nuestra Sra. del Carmen</span>
+                        <span class="fecha">2010 - 2015</span>
+                        <div class="conectori"><div class="circuloi"></div></div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3>Work Experience</h3>
+                    <div class="item der">
+                        <h4>Management Control - Budgeting</h4>
+                        <span class="casa">Professional Council of Economic Sciences (CPCECABA)</span>
+                        <span class="fecha">2022 - Present</span>
+                        <p>Budget management and consensus with different organizational areas. Budgetary control for purchase requisitions. Integral tracking of the SAP purchasing circuit (POs, requisitions, and invoices). Preparation and update of weekly Cash Flow. Control and administration of internal orders and cost centers. Reporting for the Procurement area (pending invoices and management status). Reporting for the IT area on licenses and tracking. Generation of general reports to support decision-making.</p>
+                        <div class="conectord"><div class="circulod"></div></div>
+                    </div>
+                    <div class="item der">
+                        <h4>Data Analyst</h4>
+                        <span class="casa">Door Training</span>
+                        <span class="fecha">Freelance</span>
+                        <p>Qualitative and quantitative data analysis for Shell Project 2025. Responsible for preparing reports in Excel, PDF, and PowerPoint.</p>
+                        <div class="conectord"><div class="circulod"></div></div>
+                    </div>
+                    <div class="item der">
+                        <h4>Accounting & Tax Analyst</h4>
+                        <span class="casa">Professional Council of Economic Sciences (CPCECABA)</span>
+                        <span class="fecha">2020 - 2022</span>
+                        <p>Performed accounting and tax tasks including: Tax returns (VAT, Income Tax), balance sheet accounts, payment issuance, account reconciliation, bank reconciliations, and corporate card management.</p>
+                        <div class="conectord"><div class="circulod"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACT</h2>
+            <div class="fila">
+                <div class="col">
+                    <input type="text" id="nombre" placeholder="Your Name">
+                    <input type="text" id="telefono" placeholder="Phone Number">
+                    <input type="text" id="correo" placeholder="Email Address">
+                    <input type="text" id="tema" placeholder="Subject">
+                    <textarea id="mensaje" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button onclick="enviarMensaje()">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="info">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Av. Congreso 4029, CABA - Argentina</li>
+                            <li><i class="fa-solid fa-mobile-screen"></i> Call me: +54 11-3766-4729</li>
+                            <li><i class="fa-solid fa-envelope"></i> Email: nacholosasso@hotmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#inicio" class="arriba"><i class="fa-solid fa-angles-up"></i></a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/ignacio-lo-sasso/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nacholosasso/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    function enviarMensaje() {
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const correo = document.getElementById("correo").value;
+        const tema = document.getElementById("tema").value;
+        const mensaje = document.getElementById("mensaje").value;
+
+        const mailtoLink = `mailto:nacholosasso@hotmail.com?subject=${encodeURIComponent(tema)}&body=${encodeURIComponent(
+            `Name: ${nombre}\nPhone: ${telefono}\nEmail: ${correo}\n\nMessage:\n${mensaje}`
+        )}`;
+        window.location.href = mailtoLink;
+    }
+    </script>
 </body>
 </html>
-</antArtif
