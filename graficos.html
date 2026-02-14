@@ -10,12 +10,13 @@
     <style>
         /* Estilos específicos para los gráficos */
         .grafico-contenedor {
-    width: 95%; /* Usamos casi todo el ancho disponible */
-    max-width: 1400px; /* Le damos mucho más margen para que respire */
-    margin: 20px auto;
+    width: 133%; /* Aumentamos el ancho para compensar el achique */
+    height: 1000px; /* Le damos más altura para compensar */
+    transform: scale(0.75); /* <--- ACÁ ESTÁ EL ZOOM AL 75% */
+    transform-origin: 0 0; /* Asegura que se achique desde la esquina superior izquierda */
+    border: none;
     display: block;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
 }
 
         @media (max-width: 768px) {
