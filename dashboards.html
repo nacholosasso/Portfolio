@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio - Gráficos</title>
+    <title>Portfolio - Dashboards</title>
     <link rel="stylesheet" href="estilo.css">
     <style>
-        /* Estilos específicos para los gráficos */
-        .grafico-contenedor {
+        /* Estilos específicos para los  */
+        .dashboard-contenedor {
     width: 133%; /* Aumentamos el ancho para compensar el achique */
     height: 850px; /* Le damos más altura para compensar */
     transform: scale(0.75); /* <--- ACÁ ESTÁ EL ZOOM AL 75% */
@@ -20,7 +20,7 @@
 }
 
         @media (max-width: 768px) {
-            .grafico-contenedor {
+            .dashboard-contenedor {
                 width: 100%;
             }
         }
@@ -43,7 +43,7 @@
                     <li><a href="index.html#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
                     <li><a href="index.html#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="index.html#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="graficos.html" onclick="seleccionar()">GRAFICOS</a></li>
+                    <li><a href="dashboards.html" onclick="seleccionar()">DASHBOARDS</a></li>
                     <li><a href="index.html#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -53,11 +53,11 @@
         </header>
     </div>
 
-    <section id="graficos" class="graficos">
+    <section id="dashboards" class="dashboards">
         <div class="contenido-seccion">
-            <h2>Gráficos de Gestión</h2>
+            <h2>Dashboards de Gestión</h2>
             
-<iframe class="grafico-contenedor" 
+<iframe class="dashboard-contenedor" 
         height="300" 
         width="100%" 
         frameborder="0" 
@@ -65,11 +65,11 @@
         src="https://1drv.ms/x/c/8689d80e0e4c2a37/IQQAjKMyg2bfRph8rmI9YifYAUPFwnzwEeiFGvkf6OMYSQw?em=2&wdAllowInteractivity=True&wdHideSheetTabs=False&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdWidth=1300">
 
 </iframe>       
-                        <iframe class="grafico-contenedor" height="600" frameborder="0" allowFullScreen
+                        <iframe class="dashboard-contenedor" height="600" frameborder="0" allowFullScreen
                 src="https://app.powerbi.com/view?r=eyJrIjoiOWFlYzYxNWUtOTEzZC00ZjEzLWI4M2EtNmQ0MjJiZDE2ZDNjIiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9">
             </iframe>
 
-            <iframe class="grafico-contenedor" height="600" frameborder="0" allowFullScreen
+            <iframe class="dashboard-contenedor" height="600" frameborder="0" allowFullScreen
                 src="https://app.powerbi.com/view?r=eyJrIjoiODlkNGYxMmEtZTZhNi00NWVmLWJkZWMtOGYyZGFiYWMyNDM1IiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9">
             </iframe>
         </div>
