@@ -8,30 +8,42 @@
     <title>Portfolio - Dashboards</title>
     <link rel="stylesheet" href="estilo.css">
     <style>
-        /* Estilos para la cuadrícula de Dashboards */
+        /* Contenedor principal de la cuadrícula */
         .grid-dashboards {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 columnas */
-            gap: 10px; /* Espacio entre cuadros */
-            padding: 10px;
-            max-width: 1200px;
+            grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
-        .dashboard-contenedor {
-            width: 133%; /* Compensa el scale(0.75) */
-            height: 750px; 
-            transform: scale(0.75);
-            transform-origin: 0 0;
-            border: 2px solid #333; /* Un borde sutil para separar */
+        /* Envoltorio para recortar el espacio sobrante del scale */
+        .wrapper-iframe {
+            height: 550px; /* Altura física que ocupa el cuadro en tu web */
+            overflow: hidden;
+            border: 2px solid #333;
             border-radius: 8px;
             background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        /* Responsive: En celulares se ve uno abajo del otro */
+        /* Estilo del Iframe con el zoom aplicado */
+        .dashboard-contenedor {
+            width: 142%; /* Aumentado para compensar el achique del 0.7 */
+            height: 800px; 
+            transform: scale(0.7); /* Zoom al 70% para que entre más contenido */
+            transform-origin: 0 0;
+            border: none;
+        }
+
+        /* Responsive: En celulares vuelve a 1 columna y escala normal */
         @media (max-width: 1024px) {
             .grid-dashboards {
                 grid-template-columns: 1fr;
+            }
+            .wrapper-iframe {
+                height: 500px;
             }
             .dashboard-contenedor {
                 width: 100%;
@@ -43,7 +55,19 @@
         .contenido-seccion h2 {
             text-align: center;
             padding: 30px 0;
-            color: #fff; /* Ajustalo según el fondo de tu estilo.css */
+            font-size: 2.5rem;
+        }
+
+        .arriba {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #1e67b8;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -74,23 +98,29 @@
             <h2>Dashboards de Gestión</h2>
             
             <div class="grid-dashboards">
-                <iframe class="dashboard-contenedor" 
-                    frameborder="0" scrolling="no" 
-                    src="https://1drv.ms/x/c/8689d80e0e4c2a37/IQQAjKMyg2bfRph8rmI9YifYAUPFwnzwEeiFGvkf6OMYSQw?em=2&wdAllowInteractivity=True&wdHideSheetTabs=False&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdWidth=1300">
-                </iframe>
+                <div class="wrapper-iframe">
+                    <iframe class="dashboard-contenedor" 
+                        src="https://1drv.ms/x/c/8689d80e0e4c2a37/IQQAjKMyg2bfRph8rmI9YifYAUPFwnzwEeiFGvkf6OMYSQw?em=2&wdAllowInteractivity=True&wdHideSheetTabs=True&wdHideGridlines=True&wdDownloadButton=False&wdInConfigurator=True">
+                    </iframe>
+                </div>
 
-                <iframe class="dashboard-contenedor" 
-                    frameborder="0" scrolling="no" 
-                    src="https://1drv.ms/x/c/8689d80e0e4c2a37/IQRhl86uMrAqTLXHL7ErFb3UAe0DwCDN3_OdxFCKBX_X_1c?em=2&wdAllowInteractivity=True&wdHideSheetTabs=True&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdWidth=1300&wdItem=Dashboard!A1:Z50">
-                </iframe>
+                <div class="wrapper-iframe">
+                    <iframe class="dashboard-contenedor" 
+                        src="https://1drv.ms/x/c/8689d80e0e4c2a37/IQRhl86uMrAqTLXHL7ErFb3UAe0DwCDN3_OdxFCKBX_X_1c?em=2&wdAllowInteractivity=True&wdHideSheetTabs=True&wdHideGridlines=True&wdDownloadButton=False&wdInConfigurator=True&wdItem=Dashboard!A1:S50">
+                    </iframe>
+                </div>
 
-                <iframe class="dashboard-contenedor" frameborder="0" allowFullScreen
-                    src="https://app.powerbi.com/view?r=eyJrIjoiOWFlYzYxNWUtOTEzZC00ZjEzLWI4M2EtNmQ0MjJiZDE2ZDNjIiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9">
-                </iframe>
+                <div class="wrapper-iframe">
+                    <iframe class="dashboard-contenedor" allowFullScreen
+                        src="https://app.powerbi.com/view?r=eyJrIjoiOWFlYzYxNWUtOTEzZC00ZjEzLWI4M2EtNmQ0MjJiZDE2ZDNjIiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9">
+                    </iframe>
+                </div>
 
-                <iframe class="dashboard-contenedor" frameborder="0" allowFullScreen
-                    src="https://app.powerbi.com/view?r=eyJrIjoiODlkNGYxMmEtZTZhNi00NWVmLWJkZWMtOGYyZGFiYWMyNDM1IiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9">
-                </iframe>
+                <div class="wrapper-iframe">
+                    <iframe class="dashboard-contenedor" allowFullScreen
+                        src="https://app.powerbi.com/view?r=eyJrIjoiODlkNGYxMmEtZTZhNi00NWVmLWJkZWMtOGYyZGFiYWMyNDM1IiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
