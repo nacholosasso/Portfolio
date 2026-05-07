@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Ignacio Lo Sasso, especializado en Análisis de Datos y Control de Gestión.">
+    <meta name="keywords" content="Data Scientist, Data Analyst, Portfolio, Python, Power BI, Excel, Ignacio Lo Sasso">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Ignacio Lo Sasso | Data Scientist</title>
+    <script>
+        // Evitar el "flash" del modo incorrecto y aplicar el tema (oscuro/claro) lo antes posible
+        // Carga el tema desde localStorage. Por defecto es claro.
+        if (localStorage.getItem('color-theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+        .dark .timeline-item::before {
+            background-color: #60a5fa; /* blue-400 */
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-200">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/95 dark:bg-slate-900/85 backdrop-blur-lg border-b border-slate-200 dark:border-slate-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-xl font-bold tracking-tighter text-slate-800 dark:text-slate-200">ILS<span class="text-blue-600 dark:text-blue-500">.</span></a>
+            
+            <div class="flex items-center">
+                <!-- Desktop Nav -->
+                <ul class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest text-slate-600 dark:text-slate-400">
+                    <li><a href="#inicio" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Sobre Mí</a></li>
+                    <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a></li>
+                    <li><a href="#proyectos" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Proyectos</a></li>
+                    <li><a href="dashboards.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Dashboards</a></li>
+                    <li><a href="#contacto" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contacto</a></li>
+                </ul>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" type="button" class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none rounded-lg text-xl p-2 ml-4">
+                    <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-600 dark:text-slate-400 focus:outline-none ml-2" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-6 py-4">
+            <ul class="flex flex-col space-y-4 font-medium">
+                <li><a href="#inicio" class="block hover:text-blue-600 dark:hover:text-blue-400">Inicio</a></li>
+                <li><a href="#sobre-mi" class="block hover:text-blue-600 dark:hover:text-blue-400">Sobre Mí</a></li>
+                <li><a href="#skills" class="block hover:text-blue-600 dark:hover:text-blue-400">Skills</a></li>
+                <li><a href="#proyectos" class="block hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a></li>
+                <li><a href="dashboards.html" class="block hover:text-blue-600 dark:hover:text-blue-400">Dashboards</a></li>
+                <li><a href="#contacto" class="block hover:text-blue-600 dark:hover:text-blue-400">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center pt-24 pb-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                <h1 class="text-5xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
+                    Ignacio <br><span class="text-blue-600 dark:text-blue-500">Lo Sasso</span>
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto md:mx-0">
+                Contador Público UBA | Análisis de Datos y Control de Gestión.
+                </p>
+                <div class="flex space-x-4 justify-center md:justify-start">
+                    <a href="CV_Ignacio_Lo_Sasso.pdf" download="CV_Ignacio_Lo_Sasso.pdf" target="_blank" rel="noopener noreferrer" class="bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-700 transition shadow-lg">
+                        Descargar CV <i class="fa-solid fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-auto flex justify-center">
+                <div class="relative inline-block">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-25"></div>
+                    <img src="foto_perfil.jpg" alt="Ignacio Lo Sasso" class="relative rounded-full w-64 h-64 lg:w-80 lg:h-80 object-cover aspect-square border-4 border-white dark:border-slate-800 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Sobre Mí</h2>
+            <div class="max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p class="mb-6">
+                    Como Contador Público de la UBA, mi trayectoria en Control de Gestión y Presupuesto me permitió entender la importancia crítica de los datos para la toma de decisiones. Esta base analítica es el motor de mi transición hacia la ciencia de datos.
+                </p>
+                <p>
+                    Mi enfoque actual combina el rigor contable con herramientas tecnológicas para transformar grandes volúmenes de información en insights accionables. Me especializo en procesar datos y crear visualizaciones estratégicas que facilitan la optimización de procesos de negocio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center text-slate-900 dark:text-white">Especialidades Técnicas</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Desarrollo -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400 flex items-center">
+                        <i class="fa-solid fa-chart-line mr-3"></i> Análisis & Visualización
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium">Excel Avanzado</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium">Power BI</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium">Power Query</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium">SQL</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium">Power Automate (nube y desktop)</span>
+                    </div>
+                </div>
+                <!-- Programación -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400 flex items-center">
+                        <i class="fa-solid fa-code mr-3"></i> Programación
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Profesionales -->
+    <section id="habilidades-profesionales" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center">Habilidades Profesionales</h2>
+            <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4 text-lg">
+                <span class="bg-blue-100 text-blue-800 px-5 py-2 rounded-full font-medium dark:bg-blue-900/50 dark:text-blue-300">Trabajo en Equipo</span>
+                <span class="bg-blue-100 text-blue-800 px-5 py-2 rounded-full font-medium dark:bg-blue-900/50 dark:text-blue-300">Análisis Crítico</span>
+                <span class="bg-blue-100 text-blue-800 px-5 py-2 rounded-full font-medium dark:bg-blue-900/50 dark:text-blue-300">Adaptabilidad</span>
+                <span class="bg-blue-100 text-blue-800 px-5 py-2 rounded-full font-medium dark:bg-blue-900/50 dark:text-blue-300">Resolución de Problemas</span>
+                <span class="bg-blue-100 text-blue-800 px-5 py-2 rounded-full font-medium dark:bg-blue-900/50 dark:text-blue-300">Comunicación Efectiva</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intereses -->
+    <section id="intereses" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center">Intereses</h2>
+            <div class="flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-x-20">
+                <div class="text-center text-slate-600 dark:text-slate-400">
+                    <i class="fa-solid fa-futbol text-4xl mb-3 text-blue-600 dark:text-blue-500"></i>
+                    <p class="font-semibold">Fútbol</p>
+                </div>
+                <div class="text-center text-slate-600 dark:text-slate-400">
+                    <i class="fa-solid fa-film text-4xl mb-3 text-blue-600 dark:text-blue-500"></i>
+                    <p class="font-semibold">Cine</p>
+                </div>
+                <div class="text-center text-slate-600 dark:text-slate-400">
+                    <i class="fa-solid fa-guitar text-4xl mb-3 text-blue-600 dark:text-blue-500"></i>
+                    <p class="font-semibold">Guitarra</p>
+                </div>
+                <div class="text-center text-slate-600 dark:text-slate-400">
+                    <i class="fa-solid fa-plane text-4xl mb-3 text-blue-600 dark:text-blue-500"></i>
+                    <p class="font-semibold">Viajar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center">Proyectos Destacados</h2>
+            <div id="proyectos-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- JS renderiza aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center dark:text-white">Trayectoria Profesional</h2>
+            <div class="max-w-3xl mx-auto border-l-2 border-slate-200 dark:border-slate-700 ml-4 md:ml-auto">
+                <div class="mb-12 relative pl-8 timeline-item">
+                    <span class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase">Actualidad</span>
+                    <h3 class="text-xl font-bold mt-1">Control de Gestión y Presupuesto Sr.</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm">Gestión presupuestaria integral, control de procesos en SAP y generación de reportes estratégicos para el soporte a la toma de decisiones.</p>
+                </div>
+                <div class="mb-12 relative pl-8 timeline-item">
+                    <span class="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase">Experiencia Previa</span>
+                    <h3 class="text-xl font-bold mt-1">Contabilidad & Finanzas</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm">Gestión contable integral, auditoría y reporte de estados financieros bajo estándares de alta precisión.</p>
+                </div>
+                <div class="mb-12 relative pl-8 timeline-item">
+                    <span class="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase">Experiencia Previa</span>
+                    <h3 class="text-xl font-bold mt-1">Data Analyst (Door Training)</h3>
+                    <p class="text-slate-500 dark:text-slate-400 font-medium">Proyecto Shell 2025</p>
+                    <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm">Procesamiento y visualización de datos críticos para la toma de decisiones estratégicas en operaciones de gran escala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-slate-900 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-6">Hablemos</h2>
+                    <p class="text-slate-300 dark:text-slate-400 mb-8">¿Te interesa mi perfil? Estoy listo para aportar.</p>
+                    <div class="space-y-4">
+                        <p class="flex items-center text-slate-200 dark:text-slate-300"><i class="fa-solid fa-envelope mr-4 text-blue-400"></i> nacholosasso@hotmail.com</p>
+                        <p class="flex items-center text-slate-200 dark:text-slate-300"><i class="fa-solid fa-phone mr-4 text-blue-400"></i> 11-3766-4729</p>
+                        <p class="flex items-center text-slate-200 dark:text-slate-300"><i class="fa-solid fa-location-dot mr-4 text-blue-400"></i> Villa Urquiza, CABA</p>
+                    </div>
+                    <div class="mt-8 rounded-xl overflow-hidden border border-slate-700 dark:border-slate-600 shadow-inner">
+                        <img src="ubicacion.png" alt="Ubicación aproximada en Villa Urquiza, CABA" class="w-full h-32 object-cover opacity-70 hover:opacity-100 transition duration-500">
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12 bg-white dark:bg-slate-900/50">
+                    <!-- No olvides reemplazar 'tu_id_real' con el código que te da Formspree al crear el formulario -->
+                    <form action="https://formspree.io/f/mqewjeya" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1">Nombre</label>
+                            <input type="text" name="name" required class="w-full px-4 py-2 border border-slate-200 dark:border-slate-600 dark:bg-slate-700 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                            <input type="email" name="email" required class="w-full px-4 py-2 border border-slate-200 dark:border-slate-600 dark:bg-slate-700 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1">Mensaje</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-2 border border-slate-200 dark:border-slate-600 dark:bg-slate-700 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 transition">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-8 text-2xl text-slate-400 dark:text-slate-500">
+                <a href="https://www.linkedin.com/in/ignacio-lo-sasso/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/nacholosasso/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-600 dark:hover:text-pink-500 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">©Ignacio Lo Sasso. Villa Urquiza, CABA (CP 1430).</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de Proyectos
+        const proyectos = [
+            {
+                titulo: "Portal de Noticias con IA",
+                descripcion: "Arquitectura backend escalable en python, clasificación de noticias en tiempo real y almacenamiento eficiente en NoSQL.",
+                linkGithub: "https://github.com/nacholosasso/Noticias",
+                linkProyecto: "https://info-noticias-ia.web.app/",
+                imagen: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"
+            },
+            {
+                titulo: "Contenido Personal de Cine",
+                descripcion: "Contenido personal interactivo del mundo cine con integración de API Sheets y JavaScript y un diseño moderno enfocado en la experiencia de usuario.",
+                linkGithub: "https://github.com/nacholosasso/peliculas",
+                linkProyecto: "https://peliculas-ayn.web.app/",
+                imagen: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800"
+            }
+        ];
+
+        function renderizarProyectos() {
+            const grid = document.getElementById('proyectos-grid');
+            grid.innerHTML = proyectos.map(p => `
+                <div class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-blue-500/10 transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="${p.imagen}" alt="${p.titulo}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">${p.titulo}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">${p.descripcion}</p>
+                        <div class="flex flex-col space-y-2">
+                            <a href="${p.linkGithub}" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition text-sm">
+                                <i class="fa-brands fa-github mr-2"></i> Ver en GitHub
+                            </a>
+                            ${p.linkProyecto ? `
+                            <a href="${p.linkProyecto}" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 transition text-sm">
+                                <i class="fa-solid fa-rocket mr-2"></i> Link del app web
+                            </a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars', isHidden);
+            menuIcon.classList.toggle('fa-xmark', !isHidden);
+            menuBtn.setAttribute('aria-label', isHidden ? 'Abrir menú' : 'Cerrar menú');
+        });
+
+        // Cerrar menú al clickear link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.add('fa-bars');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuBtn.setAttribute('aria-label', 'Abrir menú');
+                }
+            });
+        });
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            renderizarProyectos();
+
+            // Manejo profesional del formulario de contacto
+            const contactForm = document.querySelector('form');
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                if (!contactForm.checkValidity()) {
+                    contactForm.reportValidity();
+                    return;
+                }
+
+                const submitBtn = contactForm.querySelector('button');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: new FormData(contactForm),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        alert('¡Gracias! Tu mensaje ha sido enviado con éxito.');
+                        contactForm.reset();
+                    } else {
+                        throw new Error();
+                    }
+                } catch (err) {
+                    alert('Ocurrió un error al enviar el mensaje. Por favor, intenta nuevamente.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            });
+
+            // Lógica para el modo oscuro
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+            // Cambiar íconos según el tema actual al cargar la página
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+            }
+
+            themeToggleBtn.addEventListener('click', function() {
+                // Intercambiar íconos
+                themeToggleDarkIcon.classList.toggle('hidden');
+                themeToggleLightIcon.classList.toggle('hidden');
+
+                // Si ya existe la preferencia en localStorage
+                if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    }
+                // Si no existe la preferencia en localStorage
+                } else {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

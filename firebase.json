@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "portfolio-web-ilosasso",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
