@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Ignacio Lo Sasso, especializado en Análisis de Datos y Control de Gestión.">
-    <meta name="keywords" content="Data Scientist, Data Analyst, Portfolio, Python, Power BI, Excel, Ignacio Lo Sasso">
+    <meta name="keywords" content="Portfolio, Python, Power BI, Excel, Ignacio Lo Sasso">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Ignacio Lo Sasso | Data Scientist</title>
+    <title>Ignacio Lo Sasso </title>
     <script>
         // Evitar el "flash" del modo incorrecto y aplicar el tema (oscuro/claro) lo antes posible
         // Carga el tema desde localStorage. Por defecto es claro.
@@ -294,9 +294,10 @@
             },
             {
                 titulo: "Práctica Python",
-                descripcion: "Repositorio personal de prácticas y ejercicios en Python. Aquí alojo los archivos .py sobre los diversos temas que voy aprendiendo en mi curso.",
+                descripcion: "Repositorio personal de prácticas y ejercicios en Python. Aquí alojo los archivos .py sobre los diversos temas del curso.",
                 linkGithub: "https://github.com/nacholosasso/practica-python",
                 linkProyecto: "",
+                linkCurso: "https://www.youtube.com/playlist?list=PLyvsggKtwbLW1j0d5yaCkRF9Axpdlhsxz",
                 imagen: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&q=80&w=800"
             }
         ];
@@ -318,6 +319,10 @@
                             ${p.linkProyecto ? `
                             <a href="${p.linkProyecto}" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 transition text-sm">
                                 <i class="fa-solid fa-rocket mr-2"></i> Link del app web
+                            </a>` : ''}
+                            ${p.linkCurso ? `
+                            <a href="${p.linkCurso}" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-red-600 text-white font-semibold py-2 rounded-lg hover:bg-red-700 dark:hover:bg-red-800 transition text-sm">
+                                <i class="fa-brands fa-youtube mr-2"></i> Ver Curso
                             </a>` : ''}
                         </div>
                     </div>
